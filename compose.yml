@@ -1,6 +1,6 @@
 services:
   web:
-    image: lamri1/aperisolve:latest
+    build: .
     container_name: aperisolve-web
     restart: always
     mem_limit: 2048m
