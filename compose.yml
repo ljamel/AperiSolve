@@ -1,9 +1,11 @@
 services:
   web:
     image: ghcr.io/zeecka/aperisolve:latest
-    #build: .
     container_name: aperisolve-web
     restart: always
+    mem_limit: 2048m
+    environment:
+      - MAX_CONTENT_LENGTH=524288000
     ports:
       - "${WEB_APP_PORT:-5000}:5000"
     volumes:
@@ -28,9 +30,11 @@ services:
 
   worker:
     image: ghcr.io/zeecka/aperisolve:latest
-    #build: .
     container_name: aperisolve-worker
     restart: always
+    mem_limit: 2048m
+    environment:
+      - MAX_CONTENT_LENGTH=524288000
     command: rq worker default --url redis://redis:6379/0
     volumes:
       - apresults:/app/aperisolve/results
@@ -46,7 +50,6 @@ services:
 
   initdb:
     image: ghcr.io/zeecka/aperisolve:latest
-    #build: .
     container_name: aperisolve-initdb
     command: python -m aperisolve.utils.init_db
     volumes:
@@ -93,3 +96,5 @@ services:
 volumes:
   apresults:
   pgdata:
+
+
