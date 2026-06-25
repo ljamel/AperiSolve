@@ -103,6 +103,7 @@ Thanks to contributors:
 - [aradhyacp](https://github.com/aradhyacp)
 - [Philip Zimmermann](https://github.com/Philip-Zimmermann)
 - [abneeeees](https://github.com/abneeeees)
+- [ljamel alias ingenius](https://github.com/ljamel)
 
 Thanks to the open-source community:
 [binwalk](https://github.com/ReFirmLabs/binwalk), [exiftool](https://exiftool.org/), [GraphicsMagick identify](http://www.graphicsmagick.org/identify.html), [foremost](https://foremost.sourceforge.net/), [openstego](https://www.openstego.com/), [outguess](https://www.rbcafe.com/software/outguess/), [pngcheck](https://www.libpng.org/pub/png/apps/pngcheck.html), [steghide](https://steghide.sourceforge.net/), [strings](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/strings.html), [zsteg](https://github.com/zed-0xff/zsteg), ...
