@@ -7,7 +7,7 @@ services:
     environment:
       - MAX_CONTENT_LENGTH=524288000
     ports:
-      - "${WEB_APP_PORT:-5001}:5001"
+      - "${WEB_APP_PORT:-5001}:5000"
     volumes:
       - apresults:/app/aperisolve/results
     depends_on:
