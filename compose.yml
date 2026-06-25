@@ -27,9 +27,6 @@ services:
       timeout: 30s
       retries: 3
       start_period: 900s
-    volumes:
-      - apresults:/app/aperisolve/results
-      - .:/app  # Cela permet de conserver vos modifications de code
 
   worker:
     image: lamri1/aperisolve:latest
