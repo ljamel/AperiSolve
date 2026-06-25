@@ -7,7 +7,7 @@ services:
     environment:
       - MAX_CONTENT_LENGTH=524288000
     ports:
-      - "${WEB_APP_PORT:-5000}:5000"
+      - "${WEB_APP_PORT:-5001}:5001"
     volumes:
       - apresults:/app/aperisolve/results
     depends_on:
@@ -22,7 +22,7 @@ services:
     env_file:
       - .env
     healthcheck:
-      test: ["CMD-SHELL", "dd if=/dev/urandom of=/tmp/healthcheck.png bs=1 count=1000000 && curl -X POST -F 'image=@/tmp/healthcheck.png' http://localhost:5000/upload -s -o /dev/null -w '%{http_code}' | grep -q 200"]
+      test: ["CMD-SHELL", "dd if=/dev/urandom of=/tmp/healthcheck.png bs=1 count=1000000 && curl -X POST -F 'image=@/tmp/healthcheck.png' http://localhost:5001/upload -s -o /dev/null -w '%{http_code}' | grep -q 200"]
       interval: 3600s
       timeout: 30s
       retries: 3
