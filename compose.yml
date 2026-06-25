@@ -1,6 +1,6 @@
 services:
   web:
-    image: ghcr.io/lamri1/aperisolve:latest
+    image: lamri1/aperisolve:perso
     container_name: aperisolve-web
     restart: always
     mem_limit: 2048m
@@ -29,7 +29,7 @@ services:
       start_period: 900s
 
   worker:
-    image: ghcr.io/lamri1/aperisolve:latest
+    image: lamri1/aperisolve:perso
     container_name: aperisolve-worker
     restart: always
     mem_limit: 2048m
@@ -49,7 +49,7 @@ services:
       - .env
 
   initdb:
-    image: ghcr.io/lamri1/aperisolve:latest
+    image: lamri1/aperisolve:perso
     container_name: aperisolve-initdb
     command: python -m aperisolve.utils.init_db
     volumes:
