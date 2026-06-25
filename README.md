@@ -61,7 +61,7 @@ In case you want to host your own version of https://www.aperisolve.com/.
 > Required: Docker + Docker Compose.
 
 ```bash
-git clone https://github.com/Zeecka/AperiSolve.git
+git clone https://github.com/ljamel/AperiSolve.git
 cd AperiSolve
 cp .env.example .env
 docker compose up -d
