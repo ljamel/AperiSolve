@@ -21,13 +21,8 @@
   </a>
 </p>
 
-Try it now: **https://www.aperisolve.com**
+Try it now: **https://www.progfacil.fr:5001**
 
-Support Aperi'Solve:
-
-<a href="https://buymeacoffee.com/aperisolve">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="40" />
-</a>
 
 ---
 
@@ -67,7 +62,7 @@ cp .env.example .env
 docker compose up -d
 ```
 
-Then browse url: http://localhost:5000/
+Then browse url: http://localhost:5001/
 
 ## Architecture
 
