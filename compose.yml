@@ -1,6 +1,6 @@
 services:
   web:
-    image: lamri1/aperisolve:perso
+    image: lamri1/aperisolve:latest
     container_name: aperisolve-web
     restart: always
     mem_limit: 2048m
@@ -27,9 +27,12 @@ services:
       timeout: 30s
       retries: 3
       start_period: 900s
+    volumes:
+      - apresults:/app/aperisolve/results
+      - .:/app  # Cela permet de conserver vos modifications de code
 
   worker:
-    image: lamri1/aperisolve:perso
+    image: lamri1/aperisolve:latest
     container_name: aperisolve-worker
     restart: always
     mem_limit: 2048m
@@ -49,7 +52,7 @@ services:
       - .env
 
   initdb:
-    image: lamri1/aperisolve:perso
+    image: lamri1/aperisolve:latest
     container_name: aperisolve-initdb
     command: python -m aperisolve.utils.init_db
     volumes:
